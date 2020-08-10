@@ -1,0 +1,11 @@
+note over Browser:
+- User writes in text field
+- User presses "Submit"
+end note
+
+Browser->Server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa containing "content" & "date"
+Server->Browser: new_note_spa.js
+
+note over Browser:
+Browser renders "new_note_spa" as an item in the list
+end note
