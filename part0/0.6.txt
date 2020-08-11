@@ -1,0 +1,8 @@
+
+note over Browser:
+- User writes in text field
+- User presses "Submit"
+end note
+
+Browser->Server: HTTPS POST https://fullstack-exampleapp.herokuapp.com/new_note_spa containing "content" & "date"
+Server->Browser: 201 Created - "new_note_spa"

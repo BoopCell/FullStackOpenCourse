@@ -1,0 +1,24 @@
+
+note over Browser:
+- User enters https://fullstack-exampleapp.herokuapp.com/spa
+end note
+
+Browser->Server: HTTPS GET Request URL: https://fullstack-exampleapp.herokuapp.com/spa
+
+Server->Browser: 200 OK - spa.html
+
+Browser->Server: HTTPS GET https://fullstack-exampleapp.herokuapp.com/main.css
+
+Server->Browser: 200 OK - main.css
+
+Browser->Server: HTTPS GET https://fullstack-exampleapp.herokuapp.com/spa.js
+
+Server->Browser: 200 OK - spa.js
+
+Browser->Server: HTTPS GET https://fullstack-exampleapp.herokuapp.com/data.json
+
+Server->Browser: 200 OK - data.json
+
+Browser->Server: HTTPS GET https://fullstack-exampleapp.herokuapp.com/favicon.ico
+
+Server->Browser: 404 Not Found
