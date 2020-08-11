@@ -1,11 +1,20 @@
+
 note over Browser:
 - User writes in text field
 - User presses "Submit"
 end note
 
-Browser->Server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa containing "content" & "date"
-Server->Browser: new_note_spa.js
+Browser->Server: HTTPS POST https://fullstack-exampleapp.herokuapp.com/new_note_spa containing "content" & "date"
+Server->Browser: 302 Redirect
 
-note over Browser:
-Browser renders "new_note_spa" as an item in the list
-end note
+Browser->Server: HTTPS GET https://fullstack-exampleapp.herokuapp.com/notes.html
+Server->Browser: 200 OK - notes.html
+
+Browser->Server: HTTPS GET https://fullstack-exampleapp.herokuapp.com/new_note_spa containing "content" & "date"
+Server->Browser: 200 OK - main.css
+
+Browser->Server: HTTPS GET https://fullstack-exampleapp.herokuapp.com/main.js
+Server->Browser: 200 OK - main.js
+
+Browser->Server: HTTPS GET https://fullstack-exampleapp.herokuapp.com/data.json
+Server->Browser: 200 OK - data.json
